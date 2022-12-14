@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { PrismaService } from './prisma.service';
+import { AppController } from './infra/app.controller';
+import { PrismaService } from './infra/prisma.service';
 
 //ele sofre de injeção de dependencia
 //decorator sendo usado com o @
