@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { INestApplication, Injectable, OnModuleInit } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
-// eslint-disable-next-line prettier/prettier
 
 @Injectable()
 export class PrismaService extends PrismaClient implements OnModuleInit {

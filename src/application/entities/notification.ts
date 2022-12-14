@@ -1,9 +1,10 @@
 /* eslint-disable prettier/prettier */
 import { Content } from "./content";
 import { Replace } from "src/helpers/Replace";
+import { randomUUID } from "crypto";
 
 export interface NotificationProps{
-    recipentId: string;
+    recipientId: string;
     content: Content;// pegando a validação desse campo no arquivo "content.ts"
     category: string;
     readAt?: Date | null;
@@ -11,18 +12,24 @@ export interface NotificationProps{
 }
 
 export class Notification {
+    private _id: string;
     private props: NotificationProps;
 
     constructor(props: Replace<NotificationProps, {createdAt?: Date}>){
+        this._id = randomUUID();
         this.props = {...props, createdAt: props.createdAt ?? new Date()};
     }
 
+    public get id() {
+        return this._id;
+    }
+
     public set recipentId(recipentId: string){
-        this.props.recipentId = recipentId
+        this.props.recipientId = recipentId
     }
 
     public get recipentId(): string{
-        return this.props.recipentId;
+        return this.props.recipientId;
     }
 
     public set content(content: Content){
