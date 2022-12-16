@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller,  Post } from '@nestjs/common';
 import { SendNotification } from 'src/application/use-cases/send-notification';
 import { CreateNotificationBody } from '../dtos/create-notification-body';
 
@@ -19,8 +19,8 @@ export class NotificationController {
       recipientId,
       content,
       category
-    })
+    });
 
-    return {notification}
+    return {notification};
   }
 }

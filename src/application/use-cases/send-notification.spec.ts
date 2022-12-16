@@ -12,10 +12,8 @@ describe('Send notification', ()=>{
         const { notification } =  await sendNotification.execute({
             content: 'this is a notification',
             category: 'Social',
-            recipentId: 'example-recipent-id'
+            recipientId: 'example-recipient-id',
         });
-
-        console.log(notificationsRepository.notifications);
 
         expect(notificationsRepository.notifications).toHaveLength(1);
         expect(notificationsRepository.notifications[0]).toEqual(notification);

@@ -6,12 +6,8 @@ import { NotificationController } from "./controllers/notifications.controller";
 
 @Module({
     imports: [DatabaseModule],
-    controllers: [
-        NotificationController
-    ],
-    providers: [
-        SendNotification
-    ]
+    controllers: [NotificationController],
+    providers: [SendNotification]
 })
 
 export class HttpModule{}
