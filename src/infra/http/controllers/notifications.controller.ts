@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Body, Controller,  Post } from '@nestjs/common';
-import { SendNotification } from 'src/application/use-cases/send-notification';
+import { SendNotification } from '@application/use-cases/send-notification';
 import { CreateNotificationBody } from '../dtos/create-notification-body';
 
 //Usado para fazer as requisições a passar as ROTAS

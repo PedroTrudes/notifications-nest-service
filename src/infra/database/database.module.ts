@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 
 import { Module } from "@nestjs/common";
-import { NotificationsRespository } from "src/application/repositories/notification-repository";
+import { NotificationsRespository } from "@application/repositories/notification-repository";
 import { PrismaService } from "./prisma/prisma.service";
 import { PrismaNotificationsRepository } from "./prisma/repositories/prisma-notifications-repository";
 
